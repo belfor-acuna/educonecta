@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Importar tema personalizado */
+@import "./styles/theme.css";
+
+/* Importar componentes */
+@import "./styles/components/layout.css";
+@import "./styles/components/buttons.css";
+@import "./styles/components/cards.css";
+@import "./styles/components/typography.css";

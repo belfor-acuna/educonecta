@@ -4,28 +4,28 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
+    <div className="container-main">
       {/* Header */}
-      <header className="bg-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+      <header className="header-main">
+        <div className="container-section">
+          <div className="header-container">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold text-blue-600">EduConecta Rural</h1>
+                <h1 className="header-logo">EduConecta Rural</h1>
               </div>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#inicio" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
-                <a href="#caracteristicas" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Características</a>
-                <a href="#beneficios" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Beneficios</a>
-                <a href="#contacto" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+            <div className="header-nav">
+              <div className="header-nav-list">
+                <a href="#inicio" className="header-nav-link">Inicio</a>
+                <a href="#caracteristicas" className="header-nav-link">Características</a>
+                <a href="#beneficios" className="header-nav-link">Beneficios</a>
+                <a href="#contacto" className="header-nav-link">Contacto</a>
               </div>
             </div>
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+                className="header-mobile-btn"
               >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -35,33 +35,31 @@ function App() {
           </div>
         </div>
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
-              <a href="#inicio" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
-              <a href="#caracteristicas" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Características</a>
-              <a href="#beneficios" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Beneficios</a>
-              <a href="#contacto" className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
-            </div>
+          <div className="header-mobile-menu">
+            <a href="#inicio" className="header-mobile-link">Inicio</a>
+            <a href="#caracteristicas" className="header-mobile-link">Características</a>
+            <a href="#beneficios" className="header-mobile-link">Beneficios</a>
+            <a href="#contacto" className="header-mobile-link">Contacto</a>
           </div>
         )}
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="inicio" className="section-padding">
+        <div className="container-section">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="heading-hero">
               Conectando la Educación Rural
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-hero max-w-3xl mx-auto">
               Sistema integral para el monitoreo y gestión académica en escuelas rurales del sur de Chile,
               diseñado para funcionar con conectividad limitada.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
+            <div className="btn-group">
+              <button className="btn-primary">
                 Conocer Más
               </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
+              <button className="btn-secondary">
                 Ver Demo
               </button>
             </div>
@@ -70,43 +68,43 @@ function App() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding section-bg-white">
+        <div className="container-section">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="heading-section">
               El Desafío de la Educación Rural
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-section max-w-3xl mx-auto">
               Las escuelas rurales del sur de Chile enfrentan desafíos únicos que requieren soluciones innovadoras
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid-features">
+            <div className="feature-card">
+              <div className="feature-card-icon-error">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Baja Conectividad</h3>
-              <p className="text-gray-600">Internet limitado o intermitente dificulta el acceso a herramientas digitales educativas</p>
+              <h3 className="feature-card-title">Baja Conectividad</h3>
+              <p className="feature-card-description">Internet limitado o intermitente dificulta el acceso a herramientas digitales educativas</p>
             </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="feature-card">
+              <div className="feature-card-icon-accent">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H9a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Monitoreo Limitado</h3>
-              <p className="text-gray-600">Dificultad para seguir el progreso académico y asistencia de estudiantes en tiempo real</p>
+              <h3 className="feature-card-title">Monitoreo Limitado</h3>
+              <p className="feature-card-description">Dificultad para seguir el progreso académico y asistencia de estudiantes en tiempo real</p>
             </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="feature-card">
+              <div className="feature-card-icon-accent">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Recursos Limitados</h3>
-              <p className="text-gray-600">Herramientas complejas y costosas que requieren formación técnica avanzada</p>
+              <h3 className="feature-card-title">Recursos Limitados</h3>
+              <p className="feature-card-description">Herramientas complejas y costosas que requieren formación técnica avanzada</p>
             </div>
           </div>
         </div>
