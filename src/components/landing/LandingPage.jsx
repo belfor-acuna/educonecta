@@ -16,10 +16,10 @@ const LandingPage = ({ onDemoClick }) => {
             </div>
             <div className="header-nav">
               <div className="header-nav-list">
-                <a href="#inicio" className="header-nav-link">Inicio</a>
-                <a href="#caracteristicas" className="header-nav-link">Características</a>
-                <a href="#beneficios" className="header-nav-link">Beneficios</a>
-                <a href="#contacto" className="header-nav-link">Contacto</a>
+                <a href="#inicio" className="header-nav-link" onClick={() => setIsMenuOpen(false)}>Inicio</a>
+                <a href="#caracteristicas" className="header-nav-link" onClick={() => setIsMenuOpen(false)}>Características</a>
+                <a href="#beneficios" className="header-nav-link" onClick={() => setIsMenuOpen(false)}>Beneficios</a>
+                <a href="#contacto" className="header-nav-link" onClick={() => setIsMenuOpen(false)}>Contacto</a>
               </div>
             </div>
             <div className="md:hidden">
@@ -36,16 +36,16 @@ const LandingPage = ({ onDemoClick }) => {
         </div>
         {isMenuOpen && (
           <div className="header-mobile-menu">
-            <a href="#inicio" className="header-mobile-link">Inicio</a>
-            <a href="#caracteristicas" className="header-mobile-link">Características</a>
-            <a href="#beneficios" className="header-mobile-link">Beneficios</a>
-            <a href="#contacto" className="header-mobile-link">Contacto</a>
+            <a href="#inicio" className="header-mobile-link" onClick={() => setIsMenuOpen(false)}>Inicio</a>
+            <a href="#caracteristicas" className="header-mobile-link" onClick={() => setIsMenuOpen(false)}>Características</a>
+            <a href="#beneficios" className="header-mobile-link" onClick={() => setIsMenuOpen(false)}>Beneficios</a>
+            <a href="#contacto" className="header-mobile-link" onClick={() => setIsMenuOpen(false)}>Contacto</a>
           </div>
         )}
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="section-padding">
+      <section id="inicio" className="section-padding-top">
         <div className="container-section">
           <div className="text-center">
             <h1 className="heading-hero">
