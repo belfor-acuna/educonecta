@@ -11,7 +11,7 @@ const UserManagement = () => {
 
   const filteredUsers = users.filter(u => {
     const matchesSearch = u.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         u.email.toLowerCase().includes(searchTerm.toLowerCase());
+      u.email.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesRole = filterRole === 'all' || u.role === filterRole;
     return matchesSearch && matchesRole && u.active;
   });
@@ -48,9 +48,9 @@ const UserManagement = () => {
             </p>
           </div>
           {isAdmin && (
-            <button 
+            <button
               onClick={() => setShowAddModal(true)}
-              className="btn-primary flex items-center gap-2"
+              className="btn-primary btn-icon"
             >
               <Plus size={20} />
               Nuevo Usuario
@@ -126,9 +126,8 @@ const UserManagement = () => {
                       </div>
                     </td>
                     <td className="py-3 px-4">
-                      <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                        userItem.active ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                      }`}>
+                      <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${userItem.active ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                        }`}>
                         {userItem.active ? 'Activo' : 'Inactivo'}
                       </span>
                     </td>
@@ -167,7 +166,7 @@ const UserManagement = () => {
               Funcionalidad de registro de usuarios en desarrollo...
             </p>
             <div className="flex justify-end gap-2">
-              <button 
+              <button
                 onClick={() => setShowAddModal(false)}
                 className="btn-secondary"
               >

@@ -24,8 +24,8 @@ const ReportManagement = () => {
                   <span className="text-sm font-medium">{item.month}</span>
                   <div className="flex items-center gap-2">
                     <div className="w-24 bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-green-500 h-2 rounded-full" 
+                      <div
+                        className="bg-green-500 h-2 rounded-full"
                         style={{ width: `${item.present}%` }}
                       ></div>
                     </div>
@@ -47,8 +47,8 @@ const ReportManagement = () => {
                   <span className="text-sm font-medium">{item.subject}</span>
                   <div className="flex items-center gap-2">
                     <div className="w-24 bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-blue-500 h-2 rounded-full" 
+                      <div
+                        className="bg-blue-500 h-2 rounded-full"
                         style={{ width: `${(item.average / 7) * 100}%` }}
                       ></div>
                     </div>
@@ -65,7 +65,7 @@ const ReportManagement = () => {
           <div className="feature-card">
             <div className="flex justify-between items-center mb-4">
               <h3 className="feature-card-title">Asistencia por Curso</h3>
-              <button className="btn-secondary flex items-center gap-2">
+              <button className="btn-secondary btn-icon">
                 <Download size={16} />
                 Exportar
               </button>
@@ -89,8 +89,8 @@ const ReportManagement = () => {
                       <td className="py-2 px-3">
                         <div className="flex items-center gap-2">
                           <div className="w-16 bg-gray-200 rounded-full h-2">
-                            <div 
-                              className="bg-green-500 h-2 rounded-full" 
+                            <div
+                              className="bg-green-500 h-2 rounded-full"
                               style={{ width: `${item.present}%` }}
                             ></div>
                           </div>
@@ -107,7 +107,7 @@ const ReportManagement = () => {
           <div className="feature-card">
             <div className="flex justify-between items-center mb-4">
               <h3 className="feature-card-title">Rendimiento Académico por Curso</h3>
-              <button className="btn-secondary flex items-center gap-2">
+              <button className="btn-secondary btn-icon">
                 <Download size={16} />
                 Exportar
               </button>
@@ -126,10 +126,9 @@ const ReportManagement = () => {
                     <tr key={index} className="border-b border-gray-100">
                       <td className="py-2 px-3 font-medium">{item.grade}</td>
                       <td className="py-2 px-3">
-                        <span className={`font-semibold ${
-                          item.average >= 6.0 ? 'text-green-600' : 
+                        <span className={`font-semibold ${item.average >= 6.0 ? 'text-green-600' :
                           item.average >= 5.0 ? 'text-yellow-600' : 'text-red-600'
-                        }`}>
+                          }`}>
                           {item.average.toFixed(1)}
                         </span>
                       </td>

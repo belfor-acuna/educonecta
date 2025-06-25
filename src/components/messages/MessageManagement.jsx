@@ -35,11 +35,10 @@ const MessageManagement = () => {
                   <div
                     key={message.id}
                     onClick={() => setSelectedMessage(message)}
-                    className={`p-3 rounded-lg cursor-pointer transition-colors ${
-                      selectedMessage?.id === message.id 
-                        ? 'bg-blue-100 border-blue-300' 
-                        : 'bg-gray-50 hover:bg-gray-100'
-                    } ${!message.read && message.toId === user.id ? 'border-l-4 border-blue-500' : ''}`}
+                    className={`p-3 rounded-lg cursor-pointer transition-colors ${selectedMessage?.id === message.id
+                      ? 'bg-blue-100 border-blue-300'
+                      : 'bg-gray-50 hover:bg-gray-100'
+                      } ${!message.read && message.toId === user.id ? 'border-l-4 border-blue-500' : ''}`}
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -89,7 +88,7 @@ const MessageManagement = () => {
                 </div>
 
                 <div className="border-t border-gray-200 pt-4">
-                  <button className="btn-primary flex items-center gap-2">
+                  <button className="btn-primary btn-icon">
                     <Reply size={16} />
                     Responder
                   </button>
@@ -108,7 +107,7 @@ const MessageManagement = () => {
 
         {/* New Message Button */}
         <div className="mt-6">
-          <button className="btn-primary flex items-center gap-2">
+          <button className="btn-primary btn-icon">
             <Send size={16} />
             Nuevo Mensaje
           </button>
