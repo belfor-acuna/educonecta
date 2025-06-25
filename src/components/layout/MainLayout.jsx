@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar';
 import Dashboard from '../dashboard/Dashboard';
 import UserManagement from '../users/UserManagement';
@@ -12,6 +12,24 @@ import MessageManagement from '../messages/MessageManagement';
 
 const MainLayout = () => {
   const [activeSection, setActiveSection] = useState('dashboard');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Manejar cambios de tamaño de ventana
+  useEffect(() => {
+    const handleResize = () => {
+      // En móviles, cerrar el menú si está abierto
+      if (window.innerWidth < 768 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+      // En desktop, cerrar el menú móvil si está abierto
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMobileMenuOpen]);
 
   const renderContent = () => {
     switch (activeSection) {
@@ -42,11 +60,13 @@ const MainLayout = () => {
 
   return (
     <div className="main-layout">
-      <Sidebar 
-        activeSection={activeSection} 
-        setActiveSection={setActiveSection} 
+      <Sidebar
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+        isMobileMenuOpen={isMobileMenuOpen}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
       />
-      <main className="main-content">
+      <main className={`main-content ${isMobileMenuOpen ? 'sidebar-mobile-open' : ''}`}>
         {renderContent()}
       </main>
     </div>
