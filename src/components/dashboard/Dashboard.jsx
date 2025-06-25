@@ -1,9 +1,9 @@
 import React from 'react';
 import { useAuth } from '../../context/AuthContext';
-import { 
-  Users, 
-  School, 
-  GraduationCap, 
+import {
+  Users,
+  School,
+  GraduationCap,
   TrendingUp,
   Calendar,
   MessageSquare,
@@ -193,52 +193,52 @@ const Dashboard = () => {
             <div className="space-y-3">
               {isDocente && (
                 <>
-                  <button className="btn-primary w-full text-left">
+                  <button className="btn-primary btn-full">
                     Registrar Asistencia
                   </button>
-                  <button className="btn-secondary w-full text-left">
+                  <button className="btn-secondary btn-full">
                     Crear Nueva Actividad
                   </button>
-                  <button className="btn-secondary w-full text-left">
+                  <button className="btn-secondary btn-full">
                     Ingresar Calificaciones
                   </button>
                 </>
               )}
               {isDirector && (
                 <>
-                  <button className="btn-primary w-full text-left">
+                  <button className="btn-primary btn-full">
                     Ver Reportes
                   </button>
-                  <button className="btn-secondary w-full text-left">
+                  <button className="btn-secondary btn-full">
                     Gestionar Docentes
                   </button>
-                  <button className="btn-secondary w-full text-left">
+                  <button className="btn-secondary btn-full">
                     Revisar Asistencia
                   </button>
                 </>
               )}
               {isApoderado && (
                 <>
-                  <button className="btn-primary w-full text-left">
+                  <button className="btn-primary btn-full">
                     Ver Calificaciones
                   </button>
-                  <button className="btn-secondary w-full text-left">
+                  <button className="btn-secondary btn-full">
                     Enviar Mensaje
                   </button>
-                  <button className="btn-secondary w-full text-left">
+                  <button className="btn-secondary btn-full">
                     Ver Asistencia
                   </button>
                 </>
               )}
               {isAdmin && (
                 <>
-                  <button className="btn-primary w-full text-left">
+                  <button className="btn-primary btn-full">
                     Gestionar Usuarios
                   </button>
-                  <button className="btn-secondary w-full text-left">
+                  <button className="btn-secondary btn-full">
                     Ver Reportes Generales
                   </button>
-                  <button className="btn-secondary w-full text-left">
+                  <button className="btn-secondary btn-full">
                     Configurar Sistema
                   </button>
                 </>
