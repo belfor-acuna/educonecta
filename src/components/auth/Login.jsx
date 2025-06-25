@@ -101,7 +101,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="btn-primary w-full flex items-center justify-center gap-2"
+              className="btn-primary btn-full btn-icon"
             >
               {loading ? (
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -113,7 +113,6 @@ const Login = () => {
           </form>
         </div>
 
-        {/* Credenciales de demo */}
         <div className="mt-8">
           <h3 className="text-lg font-semibold text-center mb-4 text-gray-700">
             Credenciales de Demostración
