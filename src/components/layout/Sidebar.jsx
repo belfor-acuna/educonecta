@@ -79,7 +79,7 @@ const Sidebar = ({
     if (isApoderado) {
       return [
         ...baseItems,
-        { id: 'children', label: 'Mis Hijos', icon: GraduationCap },
+        { id: 'children', label: 'Mis Pupilos', icon: GraduationCap },
         { id: 'grades', label: 'Calificaciones', icon: BookOpen },
         { id: 'attendance', label: 'Asistencia', icon: UserCheck },
         { id: 'activities', label: 'Actividades', icon: Calendar },
