@@ -161,31 +161,31 @@ const StudentManagement = () => {
     {
       title: `¡El año académico 2025 de ${selectedStudent.name}!`,
       content: (
-        <div className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl text-center border border-blue-200">
-              <BookOpen className="mx-auto text-blue-600 mb-2" size={24} />
-              <p className="font-bold text-2xl text-blue-800">{studentRecapData[selectedStudent.id]?.actividadesTotales}</p>
-              <p className="text-sm text-blue-600 font-medium">Actividades Realizadas</p>
+        <div className="space-y-4 sm:space-y-6">
+          <div className="grid grid-cols-2 gap-2 sm:gap-4">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-3 sm:p-4 rounded-xl text-center border border-blue-200">
+              <BookOpen className="mx-auto text-blue-600 mb-1 sm:mb-2" size={20} />
+              <p className="font-bold text-lg sm:text-2xl text-blue-800">{studentRecapData[selectedStudent.id]?.actividadesTotales}</p>
+              <p className="text-xs sm:text-sm text-blue-600 font-medium">Actividades Realizadas</p>
             </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl text-center border border-green-200">
-              <Calendar className="mx-auto text-green-600 mb-2" size={24} />
-              <p className="font-bold text-2xl text-green-800">{studentRecapData[selectedStudent.id]?.asistencia}%</p>
-              <p className="text-sm text-green-600 font-medium">Asistencia</p>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-3 sm:p-4 rounded-xl text-center border border-green-200">
+              <Calendar className="mx-auto text-green-600 mb-1 sm:mb-2" size={20} />
+              <p className="font-bold text-lg sm:text-2xl text-green-800">{studentRecapData[selectedStudent.id]?.asistencia}%</p>
+              <p className="text-xs sm:text-sm text-green-600 font-medium">Asistencia</p>
             </div>
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-xl text-center border border-purple-200">
-              <Award className="mx-auto text-purple-600 mb-2" size={24} />
-              <p className="font-bold text-2xl text-purple-800">{studentRecapData[selectedStudent.id]?.promedioGeneral}</p>
-              <p className="text-sm text-purple-600 font-medium">Promedio General</p>
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-3 sm:p-4 rounded-xl text-center border border-purple-200">
+              <Award className="mx-auto text-purple-600 mb-1 sm:mb-2" size={20} />
+              <p className="font-bold text-lg sm:text-2xl text-purple-800">{studentRecapData[selectedStudent.id]?.promedioGeneral}</p>
+              <p className="text-xs sm:text-sm text-purple-600 font-medium">Promedio General</p>
             </div>
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-4 rounded-xl text-center border border-orange-200">
-              <Users className="mx-auto text-orange-600 mb-2" size={24} />
-              <p className="font-bold text-2xl text-orange-800">{studentRecapData[selectedStudent.id]?.proyectosRealizados}</p>
-              <p className="text-sm text-orange-600 font-medium">Proyectos</p>
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-3 sm:p-4 rounded-xl text-center border border-orange-200">
+              <Users className="mx-auto text-orange-600 mb-1 sm:mb-2" size={20} />
+              <p className="font-bold text-lg sm:text-2xl text-orange-800">{studentRecapData[selectedStudent.id]?.proyectosRealizados}</p>
+              <p className="text-xs sm:text-sm text-orange-600 font-medium">Proyectos</p>
             </div>
           </div>
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-xl border border-indigo-200">
-            <p className="text-center text-indigo-700 font-medium">
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-3 sm:p-4 rounded-xl border border-indigo-200">
+            <p className="text-center text-indigo-700 font-medium text-sm sm:text-base">
               <span className="font-bold">{studentRecapData[selectedStudent.id]?.evaluacionesRendidas}</span> evaluaciones •
               <span className="font-bold"> {studentRecapData[selectedStudent.id]?.tareasEntregadas}</span> tareas •
               <span className="font-bold"> {studentRecapData[selectedStudent.id]?.presentacionesOrales}</span> presentaciones
@@ -266,16 +266,16 @@ const StudentManagement = () => {
       title: 'Participación y Reconocimientos',
       content: (
         <div className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-4 rounded-xl text-center border border-indigo-200">
-              <Users className="mx-auto text-indigo-600 mb-2" size={24} />
-              <p className="font-bold text-xl text-indigo-800">{studentRecapData[selectedStudent.id]?.proyectosLiderados}</p>
-              <p className="text-sm text-indigo-600 font-medium">Proyectos Liderados</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-3 sm:p-4 rounded-xl text-center border border-indigo-200">
+              <Users className="mx-auto text-indigo-600 mb-1 sm:mb-2" size={20} />
+              <p className="font-bold text-lg sm:text-xl text-indigo-800">{studentRecapData[selectedStudent.id]?.proyectosLiderados}</p>
+              <p className="text-xs sm:text-sm text-indigo-600 font-medium">Proyectos Liderados</p>
             </div>
-            <div className="bg-gradient-to-br from-emerald-50 to-green-50 p-4 rounded-xl text-center border border-emerald-200">
-              <Heart className="mx-auto text-emerald-600 mb-2" size={24} />
-              <p className="font-bold text-xl text-emerald-800">{studentRecapData[selectedStudent.id]?.compañerosAyudados}</p>
-              <p className="text-sm text-emerald-600 font-medium">Compañeros Ayudados</p>
+            <div className="bg-gradient-to-br from-emerald-50 to-green-50 p-3 sm:p-4 rounded-xl text-center border border-emerald-200">
+              <Heart className="mx-auto text-emerald-600 mb-1 sm:mb-2" size={20} />
+              <p className="font-bold text-lg sm:text-xl text-emerald-800">{studentRecapData[selectedStudent.id]?.compañerosAyudados}</p>
+              <p className="text-xs sm:text-sm text-emerald-600 font-medium">Compañeros Ayudados</p>
             </div>
           </div>
 
@@ -360,16 +360,16 @@ const StudentManagement = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-3 rounded-xl text-center border border-purple-200">
               <p className="text-xs text-purple-600 font-medium mb-1">Clubes</p>
-              <p className="text-sm text-purple-800 font-bold">
+              <p className="text-xs sm:text-sm text-purple-800 font-bold">
                 {studentRecapData[selectedStudent.id]?.clubesParticipacion?.join(', ')}
               </p>
             </div>
             <div className="bg-gradient-to-br from-orange-50 to-red-50 p-3 rounded-xl text-center border border-orange-200">
               <p className="text-xs text-orange-600 font-medium mb-1">Deportes</p>
-              <p className="text-sm text-orange-800 font-bold">
+              <p className="text-xs sm:text-sm text-orange-800 font-bold">
                 {studentRecapData[selectedStudent.id]?.deportesPracticados?.join(', ')}
               </p>
             </div>
@@ -479,22 +479,22 @@ const StudentManagement = () => {
                 Tu dedicación, esfuerzo y valores humanos te convierten en un ejemplo para toda nuestra comunidad educativa.
               </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-4">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4">
                 <div className="text-center">
-                  <div className="bg-green-100 p-3 rounded-lg">
-                    <Trophy className="mx-auto text-green-600 mb-1" size={20} />
+                  <div className="bg-green-100 p-2 sm:p-3 rounded-lg">
+                    <Trophy className="mx-auto text-green-600 mb-1" size={16} />
                     <p className="text-xs text-green-800 font-bold">Académico</p>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Heart className="mx-auto text-blue-600 mb-1" size={20} />
+                  <div className="bg-blue-100 p-2 sm:p-3 rounded-lg">
+                    <Heart className="mx-auto text-blue-600 mb-1" size={16} />
                     <p className="text-xs text-blue-800 font-bold">Personal</p>
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="bg-purple-100 p-3 rounded-lg">
-                    <Users className="mx-auto text-purple-600 mb-1" size={20} />
+                  <div className="bg-purple-100 p-2 sm:p-3 rounded-lg">
+                    <Users className="mx-auto text-purple-600 mb-1" size={16} />
                     <p className="text-xs text-purple-800 font-bold">Social</p>
                   </div>
                 </div>
@@ -1037,10 +1037,10 @@ const StudentManagement = () => {
 
       {/* Recap Modal */}
       {recapOpen && selectedStudent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg w-full max-w-2xl p-6 relative animate-fade-in max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/20 backdrop-blur-sm p-2 sm:p-4">
+          <div className="bg-white rounded-lg shadow-lg w-full max-w-4xl p-3 sm:p-6 relative animate-fade-in max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
             <button
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-700 text-xl sm:text-2xl bg-gray-100 rounded-full w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center z-[10000]"
               onClick={closeRecap}
               aria-label="Cerrar"
             >
@@ -1048,12 +1048,14 @@ const StudentManagement = () => {
             </button>
             {/* Botón para descargar PDF */}
             <button
-              className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 font-semibold shadow"
+              className="absolute top-2 left-2 sm:top-4 sm:left-4 flex items-center gap-1 sm:gap-2 px-2 py-1 sm:px-3 sm:py-1 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 font-semibold shadow text-xs sm:text-sm z-[10000]"
               onClick={handleDownloadPDF}
             >
-              <Download size={18} /> Descargar PDF
+              <Download size={14} className="sm:w-[18px] sm:h-[18px]" />
+              <span className="hidden sm:inline">Descargar PDF</span>
+              <span className="sm:hidden">PDF</span>
             </button>
-            <div ref={recapRef} className="flex flex-col items-center mb-6 recap-pdf-compatible">
+            <div ref={recapRef} className="flex flex-col items-center mb-4 sm:mb-6 recap-pdf-compatible mt-8 sm:mt-0">
               <style>{`
                 .recap-pdf-compatible * {
                   background: #fff !important;
@@ -1068,74 +1070,78 @@ const StudentManagement = () => {
                   background: #f3f4f6 !important;
                 }
               `}</style>
-              <div className="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-3">
+              <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-purple-100 rounded-full mb-2 sm:mb-3">
                 {selectedStudent.avatar ? (
                   <img
                     src={selectedStudent.avatar}
                     alt={selectedStudent.name}
-                    className="w-14 h-14 rounded-full object-cover"
+                    className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover"
                   />
                 ) : (
-                  <User className="text-purple-600" size={32} />
+                  <User className="text-purple-600" size={24} />
                 )}
               </div>
-              <h2 className="text-2xl font-extrabold text-purple-700 text-center">
+              <h2 className="text-lg sm:text-2xl font-extrabold text-purple-700 text-center px-2">
                 Resumen Anual de {selectedStudent.name}
               </h2>
-              <p className="text-gray-600">Curso: {selectedStudent.grade}</p>
+              <p className="text-gray-600 text-sm sm:text-base">Curso: {selectedStudent.grade}</p>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 mb-6 shadow-inner">
-              {SlideIcon && <SlideIcon className="text-purple-300 mx-auto mb-4" size={48} />}
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-3 sm:p-6 mb-4 sm:mb-6 shadow-inner">
+              {SlideIcon && <SlideIcon className="text-purple-300 mx-auto mb-3 sm:mb-4" size={36} />}
 
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-purple-800 mb-2">
+              <div className="text-center mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-bold text-purple-800 mb-2 px-2 leading-tight">
                   {currentSlide.title}
                 </h3>
               </div>
 
-              <div className="mb-6">
+              <div className="mb-4 sm:mb-6">
                 {currentSlide.content}
               </div>
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
               <button
-                className="flex items-center px-4 py-2 bg-purple-100 rounded hover:bg-purple-200 font-semibold text-purple-700 shadow"
+                className="flex items-center px-3 py-2 sm:px-4 sm:py-2 bg-purple-100 rounded hover:bg-purple-200 font-semibold text-purple-700 shadow text-sm sm:text-base order-2 sm:order-1"
                 onClick={prevSlide}
               >
-                <ChevronLeft size={20} className="mr-1" />
-                Anterior
+                <ChevronLeft size={16} className="mr-1 sm:w-5 sm:h-5" />
+                <span className="hidden sm:inline">Anterior</span>
+                <span className="sm:hidden">Ant.</span>
               </button>
 
-              <div className="flex space-x-1">
-                {recapSlides.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-3 h-3 rounded-full ${index === slideIndex ? 'bg-purple-600' : 'bg-gray-300'
-                      }`}
-                    onClick={() => setSlideIndex(index)}
-                    aria-label={`Ir a diapositiva ${index + 1}`}
-                  />
-                ))}
+              <div className="flex items-center gap-3 order-1 sm:order-2">
+                <div className="flex space-x-1">
+                  {recapSlides.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${index === slideIndex ? 'bg-purple-600' : 'bg-gray-300'
+                        }`}
+                      onClick={() => setSlideIndex(index)}
+                      aria-label={`Ir a diapositiva ${index + 1}`}
+                    />
+                  ))}
+                </div>
+
+                <span className="text-xs sm:text-sm text-purple-500 font-bold">
+                  {slideIndex + 1} / {recapSlides.length}
+                </span>
               </div>
 
-              <span className="text-sm text-purple-500 font-bold">
-                {slideIndex + 1} / {recapSlides.length}
-              </span>
-
               <button
-                className="flex items-center px-4 py-2 bg-purple-100 rounded hover:bg-purple-200 font-semibold text-purple-700 shadow"
+                className="flex items-center px-3 py-2 sm:px-4 sm:py-2 bg-purple-100 rounded hover:bg-purple-200 font-semibold text-purple-700 shadow text-sm sm:text-base order-3"
                 onClick={nextSlide}
               >
-                Siguiente
-                <ChevronRight size={20} className="ml-1" />
+                <span className="hidden sm:inline">Siguiente</span>
+                <span className="sm:hidden">Sig.</span>
+                <ChevronRight size={16} className="ml-1 sm:w-5 sm:h-5" />
               </button>
             </div>
 
-            <div className="mt-6 text-center">
+            <div className="mt-4 sm:mt-6 text-center">
               <button
-                className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition font-medium"
+                className="px-4 py-2 sm:px-6 sm:py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition font-medium text-sm sm:text-base w-full sm:w-auto"
                 onClick={closeRecap}
               >
                 Finalizar recorrido
