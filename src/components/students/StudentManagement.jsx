@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { students } from '../../data/mockData';
-import { Calendar, Phone, AlertCircle, User, Award, Smile, BookOpen, Users, Star, Trophy, Heart, Activity, Bookmark, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar, Phone, AlertCircle, User, Award, Smile, BookOpen, Users, Star, Trophy, Heart, Activity, Bookmark, ChevronLeft, ChevronRight, Download } from 'lucide-react';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 const StudentManagement = () => {
   const { user, isApoderado } = useAuth();
   const [recapOpen, setRecapOpen] = useState(false);
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [slideIndex, setSlideIndex] = useState(0);
+  const recapRef = useRef();
 
   // Datos extendidos para el recap de cada estudiante
   const studentRecapData = {
@@ -228,6 +231,22 @@ const StudentManagement = () => {
   const currentSlide = recapSlides[slideIndex] || {};
   const SlideIcon = currentSlide.icon;
 
+  // Función para descargar el recap como PDF
+  const handleDownloadPDF = async () => {
+    if (!recapRef.current) return;
+    const element = recapRef.current;
+    const canvas = await html2canvas(element, { scale: 2 });
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF({ orientation: 'portrait', unit: 'pt', format: 'a4' });
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+    // Ajusta la imagen al ancho de la página
+    const imgWidth = pageWidth - 40;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    pdf.addImage(imgData, 'PNG', 20, 20, imgWidth, imgHeight);
+    pdf.save(`recap-${selectedStudent.name}.pdf`);
+  };
+
   return (
     <div>
       <div className="content-header">
@@ -310,8 +329,28 @@ const StudentManagement = () => {
             >
               ×
             </button>
-            
-            <div className="flex flex-col items-center mb-6">
+            {/* Botón para descargar PDF */}
+            <button
+              className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 font-semibold shadow"
+              onClick={handleDownloadPDF}
+            >
+              <Download size={18} /> Descargar PDF
+            </button>
+            <div ref={recapRef} className="flex flex-col items-center mb-6 recap-pdf-compatible">
+              <style>{`
+                .recap-pdf-compatible * {
+                  background: #fff !important;
+                  color: #3b0764 !important;
+                  /* Puedes ajustar más reglas aquí si lo necesitas */
+                }
+                .recap-pdf-compatible .bg-gradient-to-br,
+                .recap-pdf-compatible .bg-purple-50,
+                .recap-pdf-compatible .bg-yellow-50,
+                .recap-pdf-compatible .bg-green-50,
+                .recap-pdf-compatible .bg-blue-50 {
+                  background: #f3f4f6 !important;
+                }
+              `}</style>
               <div className="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-3">
                 {selectedStudent.avatar ? (
                   <img 
