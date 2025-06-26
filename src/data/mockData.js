@@ -143,26 +143,130 @@ export const activities = [
   {
     id: 1,
     title: 'Evaluación de Matemáticas',
-    description: 'Evaluación de fracciones y decimales',
+    description: 'Evaluación sumativa de fracciones y decimales',
     type: 'evaluacion',
     subject: 'Matemáticas',
     grade: '5° Básico',
     teacherId: 3,
-    date: '2024-01-20',
-    dueDate: '2024-01-20',
-    status: 'programada'
+    schoolId: 1,
+    startDate: new Date(2025, 5, 25, 9, 0), // 25 junio 2025, 9:00 AM
+    endDate: new Date(2025, 5, 25, 10, 30), // 25 junio 2025, 10:30 AM
+    dueDate: '2025-06-25',
+    status: 'activa',
+    location: 'Aula 1',
+    color: '#ef4444' // rojo para evaluaciones
   },
   {
     id: 2,
     title: 'Tarea de Ciencias',
-    description: 'Investigar sobre el ciclo del agua',
+    description: 'Investigación sobre el ciclo del agua',
     type: 'tarea',
-    subject: 'Ciencias',
+    subject: 'Ciencias Naturales',
+    grade: '4° Básico',
+    teacherId: 3,
+    schoolId: 1,
+    startDate: new Date(2025, 5, 24, 14, 0), // 24 junio 2025, 2:00 PM
+    endDate: new Date(2025, 5, 28, 23, 59), // 28 junio 2025, 11:59 PM
+    dueDate: '2025-06-28',
+    status: 'activa',
+    location: 'Casa',
+    color: '#3b82f6' // azul para tareas
+  },
+  {
+    id: 3,
+    title: 'Clase de Lenguaje',
+    description: 'Comprensión lectora y análisis de textos',
+    type: 'clase',
+    subject: 'Lenguaje y Comunicación',
+    grade: '6° Básico',
+    teacherId: 3,
+    schoolId: 1,
+    startDate: new Date(2025, 5, 26, 8, 30), // 26 junio 2025, 8:30 AM
+    endDate: new Date(2025, 5, 26, 9, 30), // 26 junio 2025, 9:30 AM
+    dueDate: '2025-06-26',
+    status: 'activa',
+    location: 'Aula 2',
+    color: '#10b981' // verde para clases
+  },
+  {
+    id: 4,
+    title: 'Clase de Matemáticas',
+    description: 'Operaciones con números decimales',
+    type: 'clase',
+    subject: 'Matemáticas',
     grade: '5° Básico',
     teacherId: 3,
-    date: '2024-01-18',
-    dueDate: '2024-01-25',
-    status: 'activa'
+    schoolId: 1,
+    startDate: new Date(2025, 5, 27, 9, 0), // 27 junio 2025, 9:00 AM
+    endDate: new Date(2025, 5, 27, 10, 0), // 27 junio 2025, 10:00 AM
+    dueDate: '2025-06-27',
+    status: 'activa',
+    location: 'Aula 1',
+    color: '#10b981'
+  },
+  {
+    id: 5,
+    title: 'Evaluación de Historia',
+    description: 'Evaluación sobre pueblos originarios de Chile',
+    type: 'evaluacion',
+    subject: 'Historia',
+    grade: '4° Básico',
+    teacherId: 3,
+    schoolId: 1,
+    startDate: new Date(2025, 5, 28, 10, 0), // 28 junio 2025, 10:00 AM
+    endDate: new Date(2025, 5, 28, 11, 30), // 28 junio 2025, 11:30 AM
+    dueDate: '2025-06-28',
+    status: 'activa',
+    location: 'Aula 3',
+    color: '#ef4444'
+  },
+  {
+    id: 6,
+    title: 'Clase de Ciencias',
+    description: 'Experimento: Estados de la materia',
+    type: 'clase',
+    subject: 'Ciencias Naturales',
+    grade: '4° Básico',
+    teacherId: 3,
+    schoolId: 1,
+    startDate: new Date(2025, 5, 29, 11, 0), // 29 junio 2025, 11:00 AM
+    endDate: new Date(2025, 5, 29, 12, 0), // 29 junio 2025, 12:00 PM
+    dueDate: '2025-06-29',
+    status: 'activa',
+    location: 'Laboratorio',
+    color: '#10b981'
+  },
+  {
+    id: 7,
+    title: 'Tarea de Matemáticas',
+    description: 'Ejercicios de multiplicación y división',
+    type: 'tarea',
+    subject: 'Matemáticas',
+    grade: '5° Básico',
+    teacherId: 3,
+    schoolId: 1,
+    startDate: new Date(2025, 5, 30, 15, 0), // 30 junio 2025, 3:00 PM
+    endDate: new Date(2025, 6, 2, 23, 59), // 2 julio 2025, 11:59 PM
+    dueDate: '2025-07-02',
+    status: 'activa',
+    location: 'Casa',
+    color: '#3b82f6'
+  },
+  {
+    id: 8,
+    title: 'Reunión de Apoderados',
+    description: 'Reunión mensual para revisar avances académicos',
+    type: 'reunion',
+    subject: 'General',
+    grade: '5° Básico',
+    teacherId: 3,
+    schoolId: 1,
+    startDate: new Date(2025, 6, 1, 19, 0), // 1 julio 2025, 7:00 PM
+    endDate: new Date(2025, 6, 1, 20, 30), // 1 julio 2025, 8:30 PM
+    dueDate: '2025-07-01',
+    status: 'activa',
+    location: 'Aula Magna',
+    color: '#8b5cf6' // púrpura para reuniones
   }
 ];
 
