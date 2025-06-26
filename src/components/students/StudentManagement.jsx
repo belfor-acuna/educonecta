@@ -19,10 +19,10 @@ const StudentManagement = () => {
     <div>
       <div className="content-header">
         <h1 className="heading-section">
-          {isApoderado ? 'Mis Hijos' : 'Gestión de Estudiantes'}
+          {isApoderado ? 'Mis pupilos' : 'Gestión de Estudiantes'}
         </h1>
         <p className="text-section">
-          {isApoderado ? 'Información de tus hijos' : 'Administra los estudiantes del sistema'}
+          {isApoderado ? 'Información de tus pupilos/pupilas' : 'Administra los estudiantes del sistema'}
         </p>
       </div>
 
